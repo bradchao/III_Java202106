@@ -8,8 +8,13 @@ public class Brad03 {
 		int a, b;
 		
 		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("a = ");
 		a = scanner.nextInt();
+		
+		System.out.print("b = ");
 		b = scanner.nextInt();
+		
 		int c = a + b;
 		System.out.println(c);
 		
