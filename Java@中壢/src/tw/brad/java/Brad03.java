@@ -16,7 +16,7 @@ public class Brad03 {
 		b = scanner.nextInt();
 		
 		int c = a + b;
-		System.out.println(c);
+		System.out.println(String.format("%d + %d = %d", a, b, c));
 		
 	}
 
