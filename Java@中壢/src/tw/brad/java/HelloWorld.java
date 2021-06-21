@@ -10,7 +10,7 @@ public class HelloWorld {
 	public static void main(String[] brad) {
 		// 印出 Hello, World
 		// 在執行作業系統(Windows/Mac/Linux跨平台)下的標準輸出印出 Hello, World
-		System.out.println("Hello, World");
+		System.out.println("Hello, WorldV3");
 		
 	}
 	
