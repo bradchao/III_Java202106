@@ -3,6 +3,7 @@ package tw.brad.java;
 public class PokerV1 {
 
 	public static void main(String[] args) {
+		// 起始時間
 		// 洗牌
 		int[] poker = new int[52];
 		for (int i=0; i<poker.length; i++) {
@@ -26,7 +27,9 @@ public class PokerV1 {
 			}
 			
 		}
-				
+		// 結束時間
+		// 結束 - 起始 => 執行
+		
 		// 發牌
 		// 攤牌 -> 理牌
 	}
