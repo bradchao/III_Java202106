@@ -4,6 +4,7 @@ public class PokerV1 {
 
 	public static void main(String[] args) {
 		// 起始時間
+		long start = System.currentTimeMillis();
 		// 洗牌
 		int[] poker = new int[52];
 		for (int i=0; i<poker.length; i++) {
@@ -28,7 +29,10 @@ public class PokerV1 {
 			
 		}
 		// 結束時間
+		long end = System.currentTimeMillis();
+		System.out.println("---");
 		// 結束 - 起始 => 執行
+		System.out.println(end -start);
 		
 		// 發牌
 		// 攤牌 -> 理牌
