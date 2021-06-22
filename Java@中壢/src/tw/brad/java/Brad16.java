@@ -18,6 +18,22 @@ public class Brad16 {
 			}
 			System.out.println();
 		}
+		System.out.println("---");
+		
+		int[] b = new int[] {1,2,3,4};
+		for (int v : b ) {	// for-each
+			System.out.print(v + " ");
+		}
+		System.out.println();
+		System.out.println("---");
+		
+		for (int[] v : a) {
+			for (int vv : v) {
+				System.out.print(vv +" ");
+			}
+			System.out.println();
+		}
+		
 		
 	}
 
