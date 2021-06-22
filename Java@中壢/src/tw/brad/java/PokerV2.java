@@ -4,6 +4,7 @@ public class PokerV2 {
 
 	public static void main(String[] args) {
 		// 起始時間
+		long start = System.currentTimeMillis();
 		// 洗牌
 		boolean isRepeat;
 		int rand;
@@ -28,7 +29,9 @@ public class PokerV2 {
 			System.out.println(poker[i]);
 			
 		}
+		System.out.println("---");
 		// 結束時間
+		System.out.println(System.currentTimeMillis() - start);
 		// 結束 - 起始 => 執行
 		
 		// 發牌
