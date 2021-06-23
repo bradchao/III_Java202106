@@ -1,5 +1,6 @@
 package tw.brad.myclasses;
 
+// 繼承 特定的物件
 public class Scooter extends Bike {
 	private int gear;	// 0
 	
