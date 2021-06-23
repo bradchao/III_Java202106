@@ -9,14 +9,20 @@ public class Scooter extends Bike {
 
 	public void setGear(int gear) {
 		if (gear >=0 && gear<=5) {
-			this.gear = gear;
+			if (Math.abs(this.gear - gear) == 1) {
+				this.gear = gear;
+			}
 		}
 	}
 
 	// Override
 	public void upSpeed() {
-		speed = speed < 1 ? 1 : speed*1.8;
+		if (gear > 0) {
+			speed = speed < 1 ? 1 : speed + 2*gear;
+		}
 	}
+	
+	
 	
 	 
 }

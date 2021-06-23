@@ -10,6 +10,15 @@ public class Bike {
 		speed = speed < 1 ? 1 : speed*1.2;
 	}
 	
+	// Overload 覆載
+	public void upSpeed(boolean isUphill) {
+		if (isUphill) {
+			speed = speed < 1 ? 1 : speed*1.1;
+		}else {
+			speed = speed < 1 ? 1 : speed*1.4;
+		}
+	}
+	
 	public void downSpeed() {
 		speed = speed < 1 ? 0 : speed*0.7;
 	}
