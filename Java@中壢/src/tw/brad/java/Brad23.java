@@ -10,7 +10,7 @@ public class Brad23 {
 		//Car car1 = new Car();
 		Car car2 = new Car(1);
 		System.out.println("---");
-		RacingCar rc1 = new RacingCar();
+		RacingCar rc1 = new RacingCar(1);
 		//RacingCar rc2 = new RacingCar(1);
 		System.out.println("---");
 		BradCar bc1 = new BradCar();
