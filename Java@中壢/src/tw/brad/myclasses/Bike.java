@@ -1,7 +1,10 @@
 package tw.brad.myclasses;
 
 public class Bike {
-	protected double speed;
+	// has-a member (屬性, 方法)
+	// has-a speed, upSpeed(), downSpeed(), getSpeed()
+	// myBike.member
+	protected double speed;	// public, protected, 沒有, private
 	
 	public void upSpeed() {
 		speed = speed < 1 ? 1 : speed*1.2;
