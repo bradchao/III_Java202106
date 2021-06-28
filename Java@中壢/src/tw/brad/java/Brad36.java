@@ -34,7 +34,13 @@ public class Brad36 extends JFrame {
 		});
 		
 		
-		addMouseListener(new MyMouseAdapter());
+//		addMouseListener(new MyMouseAdapter());
+		addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				System.out.println("OK4");
+			}
+		});
 		
 		setSize(640, 480);
 		setVisible(true);
