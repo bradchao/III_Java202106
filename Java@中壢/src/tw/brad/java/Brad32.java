@@ -16,7 +16,10 @@ public class Brad32 {
 		Brad321 obj4 = new Brad322();
 		System.out.println("-------------------------------");
 		obj4.m1();
-		
+		System.out.println("-------------------------------");
+		Brad321 obj5 = new Brad323();
+		System.out.println("-------------------------------");
+		obj5.m1();
 		
 		
 		
@@ -35,7 +38,11 @@ class Brad322 extends Brad321 {
 		// super();
 		System.out.println("Brad322()");
 	}
-	void m1() {System.out.println("Brad322:m1()");}
+	void m1() {
+		super.m1();
+		System.out.println("Brad322:m1()");
+		super.m1();
+	}
 	void m2() {System.out.println("Brad322:m2()");}
 }
 class Brad323 extends Brad322 {
