@@ -3,6 +3,8 @@ package tw.brad.java;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -32,6 +34,8 @@ public class Brad36 extends JFrame {
 		});
 		
 		
+		addMouseListener(new MyMouseAdapter());
+		
 		setSize(640, 480);
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -46,6 +50,13 @@ public class Brad36 extends JFrame {
 class MyListener implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		System.out.println("OK");
+	}
+}
+
+class MyMouseAdapter extends MouseAdapter {
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		System.out.println("OK3");
 	}
 }
 
