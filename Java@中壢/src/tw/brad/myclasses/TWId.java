@@ -1,7 +1,7 @@
 package tw.brad.myclasses;
 
 public class TWId {
-	private static String letters = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
+	private final static String letters = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
 	private String id;
 	
 	public TWId() {
@@ -24,13 +24,25 @@ public class TWId {
 		.append((int)(Math.random()*10))
 		.append((int)(Math.random()*10));
 		
-		
-		
+		String temp = sb.toString();
+		for (int i=0; i<10; i++) {
+			if (isRightTWId(temp + i)) {
+				id = temp + i;
+				break;
+			}
+		}
 	}
-
-//	private TWId(String id) {
-//		
-//	}
+	
+	private TWId(String id) {
+		this.id = id;
+	}
+	
+	public static TWId createTWIdFromString(String id) {
+		if (isRightTWId(id)) {
+			return new TWId(id);
+		}
+		return null;
+	}
 	
 	public static boolean isRightTWId(String id) {
 		// 第一碼為英文 二到十碼為數字
@@ -57,6 +69,14 @@ public class TWId {
 			ret = sum % 10 == 0;
 		}
 		return ret;
+	}
+	
+	public boolean isMale() {
+		return true;
+	}
+	
+	public String getArea() {
+		return "桃園市";
 	}
 	
 	@Override
