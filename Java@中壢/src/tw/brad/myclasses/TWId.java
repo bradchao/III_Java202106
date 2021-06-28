@@ -1,12 +1,32 @@
 package tw.brad.myclasses;
 
 public class TWId {
+	private static String letters = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
 	private String id;
 	
-	public TWId() {}
-	public TWId(boolean isMale) {}
-	public TWId(int area) {}
-	public TWId(boolean isMale, int area) {}
+	public TWId() {
+		this((int)(Math.random()*2)==0);
+	}
+	public TWId(boolean isMale) {
+		this(isMale, (int)(Math.random()*26));
+	}
+	public TWId(int area) {
+		this((int)(Math.random()*2)==0 , area);
+	}
+	public TWId(boolean isMale, int area) {
+		StringBuffer sb = new StringBuffer(letters.substring(area, area+1));
+		sb.append(isMale?"1":"2")
+		.append((int)(Math.random()*10))
+		.append((int)(Math.random()*10))
+		.append((int)(Math.random()*10))
+		.append((int)(Math.random()*10))
+		.append((int)(Math.random()*10))
+		.append((int)(Math.random()*10))
+		.append((int)(Math.random()*10));
+		
+		
+		
+	}
 
 //	private TWId(String id) {
 //		
@@ -17,7 +37,6 @@ public class TWId {
 		// 第二碼必須為1或2
 		// 10碼
 		// A234567890
-		String letters = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
 		boolean ret = false;
 		if (id.matches("[A-Z][12][0-9]{8}")) {
 			char c1 = id.charAt(0);
