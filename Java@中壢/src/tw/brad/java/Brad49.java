@@ -6,23 +6,20 @@ import java.io.FileOutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class Brad48 {
+public class Brad49 {
 
 	public static void main(String[] args) {
 		
 		try {
-			// 老師請問可以再解釋一次 ?url＝ 的意思嗎
-			// table / form
-			URL url = new URL("https://pdfmyurl.com/?url=" + "http://www.gamer.com.tw");
+			URL url = new URL("https://s.yimg.com/ny/api/res/1.2/4KqzPLrDlNZlyw1lJ2L9kQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY3OS4yO2NmPXdlYnA-/https://s.yimg.com/os/creatr-uploaded-images/2021-06/0feff350-d8a1-11eb-bf33-54dbdb2d0e3f");
 			HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-			//conn.setRequestMethod(null)
 			conn.connect();
 			
 			BufferedInputStream bin =
 				new BufferedInputStream(conn.getInputStream());
 			
 			BufferedOutputStream bout =
-				new BufferedOutputStream(new FileOutputStream("dir2/brad.pdf"));
+				new BufferedOutputStream(new FileOutputStream("dir2/news.jpg"));
 			
 			byte[] buf = new byte[4*1024]; int len;
 			while ( (len = bin.read(buf)) != -1) {
@@ -34,7 +31,7 @@ public class Brad48 {
 			
 			bin.close();
 			
-			System.out.println("Download OK2");
+			System.out.println("Download OK");
 			
 		}catch(Exception e) {
 			System.out.println(e);
