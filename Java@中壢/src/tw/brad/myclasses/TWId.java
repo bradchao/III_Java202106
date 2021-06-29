@@ -5,6 +5,7 @@ public class TWId {
 	private String id;
 	
 	public TWId() {
+		// 0, 1 => true/false => Java X
 		this((int)(Math.random()*2)==0);
 	}
 	public TWId(boolean isMale) {

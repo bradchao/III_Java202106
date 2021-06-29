@@ -24,6 +24,4 @@ public class Scooter extends Bike {
 	}
 	
 	
-	
-	 
 }
