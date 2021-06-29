@@ -3,6 +3,7 @@ package tw.brad.java;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 
@@ -10,8 +11,11 @@ public class Brad44 {
 
 	public static void main(String[] args) {
 		try {
-			FileInputStream fin = new FileInputStream("dir1/maskdata.csv");
-			InputStreamReader isr = new InputStreamReader(fin, Charset.forName("UTF-8"));
+//			FileInputStream fin = new FileInputStream("dir1/maskdata.csv");
+//			InputStreamReader isr = new InputStreamReader(fin, Charset.forName("UTF-8"));
+
+			FileReader isr = new FileReader("dir1/maskdata.csv");
+
 			BufferedReader reader = new BufferedReader(isr);
 			
 			String line; int num = 1;
@@ -23,7 +27,7 @@ public class Brad44 {
 			}
 			
 			
-			fin.close();
+			reader.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
