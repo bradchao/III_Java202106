@@ -2,34 +2,34 @@ package tw.brad.java;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
-public class Brad45 {
+public class Brad46 {
 
 	public static void main(String[] args) {
 		long start = System.currentTimeMillis();
 		try {
+			File source = new File("dir1/coffee.jpg");
 			BufferedInputStream bin = 
-					new BufferedInputStream(new FileInputStream("dir1/coffee.jpg"));
+					new BufferedInputStream(new FileInputStream(source));
+			long len = source.length();
+			byte[] buf = new byte[(int)len];
+			bin.read(buf);
+			bin.close();
 			
-			BufferedOutputStream bout =
-					new BufferedOutputStream(new FileOutputStream("dir2/brad.jpg"));
-			
-			int b; byte[] buf = new byte[4*1024];
-			int len;
-			while ( (len = bin.read(buf)) != -1) {
-				bout.write(buf, 0, len);
-			}
-			
+			BufferedOutputStream bout = 
+				new BufferedOutputStream(new FileOutputStream("dir2/bradv2.jpg"));
+			bout.write(buf);
 			bout.flush();
 			bout.close();
-			
-			bin.close();
 			System.out.println(System.currentTimeMillis() - start);
-		}catch (Exception e) {
+			
+		}catch(Exception e) {
 			e.printStackTrace();
 		}
+		
 		
 	}
 
