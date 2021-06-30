@@ -9,13 +9,10 @@ import java.net.URL;
 public class Brad48 {
 
 	public static void main(String[] args) {
-		
+		// GET
 		try {
-			// 老師請問可以再解釋一次 ?url＝ 的意思嗎
-			// table / form
 			URL url = new URL("https://pdfmyurl.com/?url=" + "http://www.gamer.com.tw");
 			HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-			//conn.setRequestMethod(null)
 			conn.connect();
 			
 			BufferedInputStream bin =
