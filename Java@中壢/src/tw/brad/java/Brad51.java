@@ -7,6 +7,9 @@ import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 public class Brad51 {
 
 	public static void main(String[] args) {
@@ -21,7 +24,7 @@ public class Brad51 {
 			
 			String line; StringBuffer sb = new StringBuffer();
 			while ( (line = reader.readLine()) != null) {
-				System.out.println(line);
+				//System.out.println(line);
 				sb.append(line);
 			}
 			reader.close();
@@ -36,7 +39,13 @@ public class Brad51 {
 	}
 	
 	static void parseData(String json) {
-		
+		JSONArray root = new JSONArray(json);
+		for (int i=0; i<root.length(); i++) {
+			JSONObject row = root.getJSONObject(i);
+			String name = row.getString("Name");
+			String tel = row.getString("Tel");
+			System.out.println(name + ":" + tel);
+		}
 	}
 	
 	
