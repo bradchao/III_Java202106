@@ -15,7 +15,7 @@ public class Brad51 {
 	public static void main(String[] args) {
 		
 		try {
-			URL url = new URL("https://data.coa.gov.tw/Service/OpenData/ODwsv/ODwsvTravelFood.aspx");
+			URL url = new URL("https://data.coa.gov.tw/Service/OpenData/ODwsv/ODwsvAgriculturalProduce.aspx");
 			HttpURLConnection conn  = (HttpURLConnection)url.openConnection();
 			conn.connect();
 			
@@ -43,7 +43,7 @@ public class Brad51 {
 		for (int i=0; i<root.length(); i++) {
 			JSONObject row = root.getJSONObject(i);
 			String name = row.getString("Name");
-			String tel = row.getString("Tel");
+			String tel = row.getString("SalePlace");
 			System.out.println(name + ":" + tel);
 		}
 	}
